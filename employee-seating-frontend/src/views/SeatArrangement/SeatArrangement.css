@@ -1,0 +1,58 @@
+.seats {
+  display: flex;
+  flex-wrap: wrap; /* 使座位按鈕在超過容器寬度時換行 */
+  margin-inline: 15px; /* 設置按鈕之間的間隔 */
+  justify-content: center; /* 按鈕從左邊開始排列 */
+  max-width: 100%;
+  position: relative;
+}
+
+.seat-container {
+  margin: 10px;
+  /* flex: 0 0 calc(20% - 15px); */
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #f0f0f0; /* 背景色 */
+  border: 1px solid #ddd; /* 邊框顏色 */
+  border-radius: 12px; /* 圓角設置 */
+  padding: 12px 18px; /* 設置按鈕內邊距 */
+  cursor: pointer;
+  text-align: center;
+  min-width: 100px; /* 設置按鈕最小寬度 */
+  max-width: 150px; /* 設置按鈕最大寬度 */
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+button.selected {
+  background-color: #90ee90;
+}
+
+button.occupied {
+  background-color: #ff6666;
+}
+
+.employee-selection,
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-btn button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn button:hover {
+  background-color: #45a049;
+}
