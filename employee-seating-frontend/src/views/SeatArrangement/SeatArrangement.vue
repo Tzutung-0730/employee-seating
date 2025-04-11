@@ -5,7 +5,6 @@
     <div class="employee-selection">
       <label for="employeeSelect">選擇員工：</label>
       <select v-model="selectedEmployee.empId" id="employeeSelect" @focus="openEmployeeSelect" @change="selectEmployee($event)" ref="employeeSelect">
-        <option value="" disabled>請選擇員工</option>
         <option v-for="emp in filteredEmployees" :key="emp.empId" :value="emp.empId">
           {{ emp.name }} (員編: {{ emp.empId }})
         </option>
@@ -109,7 +108,11 @@ export default {
           this.releaseSeat(seat);
         }
       } else {
-        this.selectedSeat = seat;
+        if (this.selectedSeat && this.selectedSeat.seatNo === seat.seatNo && this.selectedSeat.floorNo === seat.floorNo) {
+          this.selectedSeat = null;
+        } else {
+          this.selectedSeat = seat; 
+        }
       }
     },
 
