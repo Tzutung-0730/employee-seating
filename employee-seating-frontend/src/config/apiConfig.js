@@ -15,5 +15,6 @@ export const SeatingCharts = {
   updateSeatingChart: (floorSeatSeq) => `${BASE_URL}/seating-charts/${floorSeatSeq}`,
   deleteSeatingChart: (floorSeatSeq) => `${BASE_URL}/seating-charts/${floorSeatSeq}`,
   updateSeatOccupied: (floorSeatSeq) => `${BASE_URL}/seating-charts/updateOccupied/${floorSeatSeq}`,
-  updateSeatAvailable: (floorSeatSeq) => `${BASE_URL}/seating-charts/updateAvailable/${floorSeatSeq}`, 
+  updateSeatAvailable: (floorSeatSeq) => `${BASE_URL}/seating-charts/updateAvailable/${floorSeatSeq}`,
+  getEmployeeSeatAssignments: `${BASE_URL}/seating-charts/employee-seat-assignment`, 
 }

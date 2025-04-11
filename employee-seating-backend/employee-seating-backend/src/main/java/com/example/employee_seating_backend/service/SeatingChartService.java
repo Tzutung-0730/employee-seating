@@ -1,6 +1,7 @@
 package com.example.employee_seating_backend.service;
 
 import com.example.employee_seating_backend.model.SeatingChart;
+import com.example.employee_seating_backend.model.SeatAssignment;
 import com.example.employee_seating_backend.repository.SeatingChartRepository;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +34,9 @@ public class SeatingChartService {
 
     public void deleteSeatingChart(int floorSeatSeq) {
         seatingChartRepository.deleteSeatingChart(floorSeatSeq);
+    }
+
+    public List<SeatAssignment> getEmployeeSeatAssignment() {
+        return seatingChartRepository.getEmployeeSeatAssignment();
     }
 }

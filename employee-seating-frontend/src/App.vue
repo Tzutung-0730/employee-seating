@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <router-view></router-view> <!-- 在這裡顯示路由的內容 -->
+    <header-component></header-component>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import headerComponent from './components/Header/HeaderComponent.vue';
+
 export default {
   name: 'App',
+  components: {
+    headerComponent
+  }
 };
 </script>
-
-<style>
-/* 可以在這裡寫全局樣式 */
-</style>

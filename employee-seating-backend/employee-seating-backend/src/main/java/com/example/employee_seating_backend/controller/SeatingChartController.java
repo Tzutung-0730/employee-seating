@@ -1,6 +1,7 @@
 package com.example.employee_seating_backend.controller;
 
 import com.example.employee_seating_backend.model.SeatingChart;
+import com.example.employee_seating_backend.model.SeatAssignment;
 import com.example.employee_seating_backend.service.SeatingChartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/seating-charts")
@@ -93,6 +95,18 @@ public class SeatingChartController {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error deleting seating chart: " + e.getMessage());
+        }
+    }
+
+    // 獲取員工座位分配
+    @GetMapping("/employee-seat-assignment")
+    public ResponseEntity<List<SeatAssignment>> getEmployeeSeatAssignment() {
+        try {
+            List<SeatAssignment> assignments = seatingChartService.getEmployeeSeatAssignment();
+            return ResponseEntity.ok(assignments);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }

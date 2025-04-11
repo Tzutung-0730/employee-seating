@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import SeatArrangement from '../views/SeatArrangement/SeatArrangement.vue';
+import Employee from '@/views/Employee/Employee.vue';
+import SeatChart from '@/views/SeatChart/SeatChart.vue';
 
 const routes = [
   {
@@ -7,7 +9,16 @@ const routes = [
     name: 'SeatArrangement',
     component: SeatArrangement,
   },
-  // 更多路由設置
+  {
+    path: '/employee',
+    name: 'Employee',
+    component: Employee,
+  },
+  {
+    path: '/seatChart',
+    name: 'SeatChart',
+    component: SeatChart,
+  },
 ];
 
 const router = createRouter({

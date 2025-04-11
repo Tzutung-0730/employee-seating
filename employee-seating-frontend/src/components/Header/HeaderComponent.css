@@ -1,0 +1,72 @@
+/* HeaderComponent.css */
+
+/* 設定header的基本樣式 */
+header {
+  background-color: #47607d;  /* 背景顏色使用藍色 */
+  padding: 15px;
+  color: white;
+  border-radius: 8px 8px 0 0; /* 上方圓角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+}
+
+/* 設定nav排版 */
+nav {
+  display: flex;
+  justify-content: center; /* 將項目置中 */
+  align-items: center;
+}
+
+/* 設定ul排版 */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* 項目之間的間距 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 設定li項目 */
+li {
+  display: inline-block;
+}
+
+/* 設定router-link樣式 */
+router-link {
+  text-decoration: none;
+}
+
+/* 設定nav-item樣式 */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 25px;  /* 增加內邊距，使按鈕更大 */
+  border-radius: 25px;  /* 圓角效果 */
+  transition: all 0.3s ease-in-out; /* 添加過渡效果 */
+  font-weight: 500; /* 加粗文字 */
+  text-transform: uppercase; /* 文字大寫 */
+}
+
+/* Hover效果 */
+.nav-item:hover {
+  background-color: #1e4977; /* 懸停時的背景顏色，使用較深的藍色 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 增加陰影 */
+  cursor: pointer; /* 懸停時顯示指標 */
+}
+
+/* 當前選中頁面樣式 */
+.nav-item.router-link-exact-active {
+  background-color: #003366; /* 選中時的背景顏色，使用較深的藍色 */
+  color: white; /* 選中時文字顏色 */
+}
+
+/* 小螢幕適應 */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;  /* 當螢幕寬度小於768px時，變為垂直排列 */
+  }
+  ul {
+    flex-direction: column; /* 垂直排列 */
+    gap: 15px; /* 項目間距 */
+  }
+}
