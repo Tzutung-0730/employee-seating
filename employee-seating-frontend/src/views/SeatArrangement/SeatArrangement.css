@@ -1,6 +1,6 @@
 .title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .seats {
@@ -66,17 +66,32 @@ button.occupied {
 }
 
 .submit-btn button {
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #4655d4;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(145deg, #4655d4, #2e3896);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px; 
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease-in-out; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .submit-btn button:hover {
-  background-color: #2e3896;
+  background: linear-gradient(145deg, #2e3896, #4655d4); 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.submit-btn button:active {
+  transform: translateY(1px);
+}
+
+.submit-btn button:focus {
+  outline: none; 
+  border: 2px solid #2b3e60; 
 }
 
 #employeeSelect {
