@@ -53,13 +53,3 @@ router-link {
   background-color: #003366;
   color: white;
 }
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
